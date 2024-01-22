@@ -25,7 +25,7 @@ const UserSchema = new mongoose.Schema({
 })
 
 
-
+// 
 
 const userModel = mongoose.model("user_info", UserSchema)
 
