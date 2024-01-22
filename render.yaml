@@ -1,7 +1,0 @@
-FROM tryretool/backend:latest
-FROM tryretool/backend:2.57.1
-
- key: CLIENT_ID
-    value: 1063600432351-103cau2dmvvj3ipi8v89kscb43mnp07o.apps.googleusercontent.com
-key: CLIENT_SECRET
-    value: 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
