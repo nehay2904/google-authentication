@@ -25,14 +25,12 @@ app.use(cors({
 
 require('dotenv').config();
 
-const clientid = "1063600432351-103cau2dmvvj3ipi8v89kscb43mnp07o.apps.googleusercontent.com"
-const clientsecret = "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"
-
 
 const PORT = process.env.PORT;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-
+const CLIENTID = process.env.CLIENTID;
+const CLIENTSECRET  =  process.env.CLIENTSECRET;
 //connection of mongoose
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -52,11 +50,11 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-
+//  PASSPORT
 passport.use(
   new OAuthStrategy({
-      clientID : clientid,
-      clientSecret : clientsecret,
+      clientID : CLIENTID,
+      clientSecret : CLIENTSECRET,
       callbackURL :"/auth/google/callback",
       scope: ['profile', 'email']
   },
