@@ -29,8 +29,8 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-const CLIENTID = "1063600432351-103cau2dmvvj3ipi8v89kscb43mnp07o.apps.googleusercontent.com";
-const CLIENTSECRET  =  "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"
+const CLIENTID = process.env.CLIENTID;
+const CLIENTSECRET  = process.env.CLIENTSECRET;
 //connection of mongoose
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
