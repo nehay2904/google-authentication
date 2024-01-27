@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 const cors = require('cors')
 app.use(cors({
-  origin:"http://localhost:3000",
+  origin:"https://65b51a971cb913a2fce8c389--phenomenal-axolotl-9b72d3.netlify.app/",
   methods:"GET, POST, PUT, DELETE",
   credentials:true
 }))
@@ -92,8 +92,8 @@ passport.deserializeUser((user,done) =>{
 app.get('/auth/google', passport.authenticate("google", {scope:['profile', 'email']}))
 
 app.get('/auth/google/callback',passport.authenticate("google",{
-  successRedirect:"http://localhost:3000",
-  failureRedirect:"http://localhost:3000"
+  successRedirect:"https://65b51a971cb913a2fce8c389--phenomenal-axolotl-9b72d3.netlify.app/",
+  failureRedirect:"https://65b51a971cb913a2fce8c389--phenomenal-axolotl-9b72d3.netlify.app/"
 }))
 
 app.get("/login/success", (req,res) =>{
